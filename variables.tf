@@ -6,6 +6,11 @@ variable "tags" {
   default     = {}
 }
 
+variable "name" {
+  type        = string
+  description = "Name of the instance, also used in naming the other resources in this module"
+}
+
 ## Security group
 
 variable "vpc_id" {
