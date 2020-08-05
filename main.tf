@@ -27,7 +27,7 @@ resource "aws_instance" "instance" {
   disable_api_termination     = true
   instance_type               = var.instance_type
   key_name                    = var.key_name
-  vpc_security_group_ids      = [aws_security_group.security_group]
+  vpc_security_group_ids      = [aws_security_group.security_group.id]
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true
   tags                        = var.tags
